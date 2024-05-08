@@ -1,4 +1,4 @@
-package ;
+package com.eightquiz;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class QuizMain {
     public static void main(String[] args) throws FileNotFoundException {
-        File doc = new File("Ap_World_Vocab/APWH5.txt");
+        File doc = new File("Ap_World_Vocab/APWH" + Constants.UNIT + ".txt");
         Scanner scanDoc = new Scanner(doc);
         Scanner lengthScanDoc = new Scanner(doc);
         Scanner in = new Scanner(System.in);
@@ -21,7 +21,7 @@ public class QuizMain {
         }
         lengthScanDoc.close();
         String input = "";
-        File docReQuiz = new File("APWH5Re.txt");
+        File docReQuiz = new File("Ap_World_Re/APWH" + Constants.UNIT + "Re.txt");
         PrintWriter docReQuizPrint = new PrintWriter(docReQuiz);
         Question[] questions = new Question[questionSizeLocal];
         boolean[] isQuestionSaid = new boolean[questionSizeLocal];
